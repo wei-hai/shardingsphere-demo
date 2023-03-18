@@ -1,0 +1,8 @@
+authority:
+  users:
+    - user: root@%
+      password: root
+    - user: sharding
+      password: sharding
+  privilege:
+    type: ALL_PERMITTED

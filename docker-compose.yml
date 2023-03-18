@@ -1,0 +1,27 @@
+services:
+  proxy:
+    image: apache/shardingsphere-proxy
+    ports:
+      - "3307:3307"
+    depends_on:
+      - postgres1
+      - postgres2
+    volumes:
+      - /Users/wei.hai/git/proxy/conf:/opt/shardingsphere-proxy/conf
+  postgres1:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=dbname
+    ports:
+      - "5432:5432"
+  postgres2:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=dbname
+    ports:
+      - "5433:5432"
+  
