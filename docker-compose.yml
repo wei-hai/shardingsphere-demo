@@ -7,7 +7,7 @@ services:
       - postgres1
       - postgres2
     volumes:
-      - /Users/wei.hai/git/proxy/conf:/opt/shardingsphere-proxy/conf
+      - /Users/wei.hai/git/shardingsphere-demo/conf:/opt/shardingsphere-proxy/conf
   postgres1:
     image: postgres:alpine
     environment:
